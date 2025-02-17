@@ -140,6 +140,7 @@ class Token {
         this.eat("IDENTIFICADOR");
         this.eat("IGUAL");
         let exprNode = this.expr();
+        this.eat("PUNTO_Y_COMA");   
         return new ASTNode("ASIGNACION", varName, exprNode);
       }
       return this.expr();
